@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    overflow-wrap: break-word;
 }
 
 body {
@@ -50,6 +51,10 @@ main {
     border: solid 0.1rem rgb(0, 0, 0);
 }
 
+.hidden {
+    display: none;
+}
+
 .article-header {
     cursor: pointer;
     background-color: rgb(180, 180, 180);
@@ -66,10 +71,6 @@ main {
   
 .article-header.read {
     background-color: #b73a3a;
-}
-  
-.article-content {
-    display: none;
 }
 
 .navbar {
@@ -95,10 +96,6 @@ main {
 
 .slide-img {
     max-width: 15rem;
-}
-
-.hidden {
-    display: none;
 }
 
 .img-container {
