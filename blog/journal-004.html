@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Miguel Bracamontes">
+    <meta name="description" content="A wwweb enthusiast online space">
+    <title>Miguel Bracamontes</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+	<!-- header -->
+	<header class="marpad">
+		<h1>Miguel Bracamontes</h1>
+		<p><em>A wwweb enthusiast</em></p>
+		<img src="https://images2.imgbox.com/71/7e/dJZMLjYc_o.gif">
+	</header>
+	<!-- navigation bar -->
+	<nav class="marpad">
+		<ul class="navbar">
+			<li><a href="/index.html">home</a></li>
+			<li><a href="/blog.html">blog</a></li>
+			<li><a href="/about.html">about</a></li>
+			<li><a href="/contact.html">contact</a></li>
+		</ul>
+	</nav>
+    <!-- content -->
+    <main class="marpad">
+        <article>
+			<section class="article-header">
+				<h2>Journal 004</h2>
+				<time>2024-10-12</time>
+				<p class="marginless"><em>About the recent changes to the website</em></p>
+			</section>
+			<section>
+				<p>So it's finally done. My website is back online. It's been a lot of offline time and a lot of changes in how things are done. I wanted to keep things moving and entertaining with the way I write and publish my content.</p>
+				<p>Hosting moved from NearlyFreeSpeech to GitHub Pages. I was already keeping the version control with Git and hosting it on GitHub, so it only made sense to use each push to build the website's updates in one move. This single decision made it cheaper by only paying for the domain, and slimmer, since I only use Visual Studio Code to edit, add, commit, and push all updates, thus removing the need to use FileZilla to connect and upload to the server. Paying for hosting with NFS was, per se, incredibly affordable, so to say that it became "cheaper" is a technicality, though all these changes were.</p>
+				<p>I got rid of two pages, basically all that were there. Movies and Blog were restructured. My whole website feels more personal and close to me, with sentimental value, because I want to use it and treat it like a journal. I am writing all of this with the hope of making a documentation, more or less accurate, of what is interesting and mind-captivating for me at that moment. So the whole purpose of all this is to have a blog. It felt redundant to have an index page making the "landing page" function; basically because all it hosted was a header that could easily be the header for the blog page. But it wasn't. Blog was a different page made from a folder containing a lot of individual HTML files. It was a mess, honestly, so I decided to host the whole corpus of my writing in one gigantic single file instead. I deleted the folder and the individual files and moved all my current posts into the index file.</p> 	
+				<p>To avoid having an index page being a huge wall of text, I implemented the little click-to-read feature using JavaScript to keep it all inside the one index file calling the script. It keeps track of the read posts and can toggle on/off the content visibility, trying to make blog browsing a little easier. It's a super vanilla application of all technologies incorporated, so I expect the whole site to be kind of messy and offering lots of enhancement, optimization, and restructuring opportunities. But that's part of the point of the hobby. Always learning and becoming better while keeping entertained.</p>
+				<p>I actually like what I am doing with the movies page. I just feel that the project won't be receiving a lot of attention going into the future because I'll be way too immersed in digging baseball data availability to pay proper attention to solving table and data management problems with the movie page and its automated logs. The way I am looking to manage the data for this project requires a lot of scripting, a little scraping of public sites, and a huge move in my storage system that's not scheduled this year, at least, so keeping the project dormant is the best decision for now. It's an interesting little project, though, and I'd like to keep it for now, looking for opportunities to work on it in the future, and if I reach a good functional state, I'll be setting up a separate webpage for that project under one of my available domains.</p>
+				<p>But it's good enough for now. I like how things are going.</p>
+			</section>
+		</article>
+    </main>
+    <!-- footer -->
+	<footer class="marpad">
+		<p>&copy; 2024 Miguel Bracamontes</p>
+		<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noreferrer"><img src="https://images2.imgbox.com/a5/42/IV9saTzo_o.png"></a>
+	</footer>
+    <!-- scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

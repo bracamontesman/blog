@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Miguel Bracamontes">
+    <meta name="description" content="A wwweb enthusiast online space">
+    <title>Miguel Bracamontes</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+	<!-- header -->
+	<header class="marpad">
+		<h1>Miguel Bracamontes</h1>
+		<p><em>A wwweb enthusiast</em></p>
+		<img src="https://images2.imgbox.com/71/7e/dJZMLjYc_o.gif">
+	</header>
+	<!-- navigation bar -->
+	<nav class="marpad">
+		<ul class="navbar">
+			<li><a href="/index.html">home</a></li>
+			<li><a href="/blog.html">blog</a></li>
+			<li><a href="/about.html">about</a></li>
+			<li><a href="/contact.html">contact</a></li>
+		</ul>
+	</nav>
+    <!-- content -->
+    <main class="marpad">
+        <article>
+			<section class="article-header">
+				<h2>XZ-Utils backdoor</h2>
+				<time>2024-03-30</time>
+				<p class="marginless"><em>About the odd case of XZ-Utils backdoor and the creator of it</em></p>
+			</section>
+			<section>
+				<h3>What is XZ-Utils?</h3>
+				<p>XZ Utils, which used to be called LZMA Utils, is a free software toolbox for lossless data compression. It's mainly used through command-line interaction and it works on systems like Linux and also Windows starting from version 5.0. When you use XZ Utils to compress or decompress data, it uses something called the Lempel-Ziv-Markov chain algorithm, or LZMA for short. This fancy name basically means it's a smart way to crunch down data without messing it up.</p>
+				<p>Originally, XZ Utils was made as a version of another program called LZMA-SDK, which was created by a guy named Igor Pavlov. But then the XZ Utils folks tweaked it to work smoothly on Unix systems (like Linux) and to match how things usually work in those environments.</p>
+
+				<h3>Discovery of a Backdoor</h3>
+				<p>On March 29th, 2024, Andres Freund, a software engineer at Microsoft, accidentally stumbled upon a sneaky backdoor in XZ-Utils versions 5.6.0 and 5.6.1 while researching odd CPU usage by SSH processes.</p>
+				<p>The sneaky code wasn't spotted in the original code stored in the Git repository, which is like the master storage for code changes. Why? Because it was using a tool called an M4 macro, which wasn't part of the Git distribution. According to Freund, who discovered this mischief and talked about it on the OSS-Security's Openwall, this M4 macro is like the secret handshake for the backdoor to sneak into the building process. Now, here's where it gets serious: Red Hat says that this sneaky build can mess with the security of SSHD, which is a way to securely connect to computers remotely. If everything lines up just right, this meddling could let a bad actor break through SSHD's security and get into the whole system without permission.</p>
+
+				<h3>Suspected Actor</h3>
+				<p>When we're talking about an "under-the-radar" project like XZ, they are usually not backed by any big company and runs purely on volunteer power. That's the vibe of many open-source projects. The lesser-known ones, sometimes used by loads of people, are looked after by just a handful of folks who donate their time to keep things running smoothly.</p>
+				<p>This particular tool was put together by Lasse Collin from the get-go, with Jia Tan jumping in about two years back, seemingly out of the blue. Jia got the keys to the kingdom about six months later, which means this seemingly "boring" tool, used by tons of folks, was being looked after by just two people. And when Lasse needed to take a breather due to health stuff, that left Jia in charge of making changes and giving the green light to two versions that, so far, seem to be affected.</p>
+				<p>As Freund pointed out in their message on the Openwall forum, considering the activity over a few weeks, the person making the changes is either directly involved or their system got hit hard. But it seems less likely that it's just a hacked system, especially since they were talking for some time about the "fixes" needed. These fixes were basically band-aids to patch up crashes caused by XZ and the sneaky backdoor itself not interacting so well. Jia Tan teamed up with other developers to push these fixes (basically, workarounds for the backdoor glitches) into major Linux distributions, like Fedora 40 and 41. They even pitched in to write code to tackle related issues and speed up the fixes.</p>
+				<p>Now, here's where things get a bit intense. Pulling off something like this, spreading a sneaky attack through a project over two years of work and collaboration, takes serious cash. It's like, you need big bucks to make big moves. So, when you see something this slick, it's hard not to think it's being bankrolled by a government or something. It's got us wondering: could sneaking into open-source software through supply-chain attacks become the new target for certain groups? It's definitely a spooky thought.</p>
+                <div class="img-container">
+                    <img src="https://images2.imgbox.com/1c/8f/YSMC57xJ_o.png">
+                </div>
+			</section>
+		</article>
+    </main>
+    <!-- footer -->
+	<footer class="marpad">
+		<p>&copy; 2024 Miguel Bracamontes</p>
+		<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noreferrer"><img src="https://images2.imgbox.com/a5/42/IV9saTzo_o.png"></a>
+	</footer>
+    <!-- scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

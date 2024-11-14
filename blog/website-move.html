@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Miguel Bracamontes">
+    <meta name="description" content="A wwweb enthusiast online space">
+    <title>Miguel Bracamontes</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+	<!-- header -->
+	<header class="marpad">
+		<h1>Miguel Bracamontes</h1>
+		<p><em>A wwweb enthusiast</em></p>
+		<img src="https://images2.imgbox.com/71/7e/dJZMLjYc_o.gif">
+	</header>
+	<!-- navigation bar -->
+	<nav class="marpad">
+		<ul class="navbar">
+			<li><a href="/index.html">home</a></li>
+			<li><a href="/blog.html">blog</a></li>
+			<li><a href="/about.html">about</a></li>
+			<li><a href="/contact.html">contact</a></li>
+		</ul>
+	</nav>
+    <!-- content -->
+    <main class="marpad">
+        <article>
+			<section class="article-header">
+				<h2>Website move</h2>
+				<time>2024-03-20</time>
+				<p class="marginless"><em>About this website hosting provider</em></p>
+			</section>
+			<section>
+				<p>I just migrated my website from Codeberg to NearlyFreeSpeech (NFSN). There's a lot to take in, but it feels awesome to finally have it up and running. With NFSN, you've got way more control, make your own decisions, and the pricing is fair and affordable for small basic blogs like mine. Plus, Codeberg is more geared towards cooperative development and FOSS. My hosting needs are different because I'm running a personal website with a more opinionated vibe.</p>
+				<p>I'd never used FileZilla before, and this seemed like the perfect opportunity to make the switch and start figuring it out. It's a name I've seen around a lot over the years, but I never really understood how to use it. Digging into my NFSN panel, I stumbled upon the SFTP info for connecting and uploading. After a bit of web surfing, I seized the chance. It was the shortest learning curve I've ever had. It was as streamlined as this <a href="https://help.one.com/hc/en-us/articles/115005585709-How-do-I-connect-to-an-SFTP-server-with-FileZilla" target="_blank">article</a>, and in just a few minutes, I was in the server, uploading the website files and online.</p>
+				<p>Even though there was an option to handle everything through the command line, I opted for the GUI. I feel like, given the way I'm building this website (without using generators), I can have more control over each update and any new blog post. I keep a local version control with Git, and I keep pushing the changes to the now private Codeberg repository. However, cloning the repo to the NFSN server and writing a hook for it to checkout to a public branch and publish each push felt a little overkill. I preferred to go with the FileZilla comparison mode, where I can also track changes in files and only push the updated versions with a couple of clicks. It's as easy as the full automation, I feel.</p>
+				<div class="img-container">
+					<a href="https://imgbox.com/S7UUSiJ1" target="_blank"><img src="https://images2.imgbox.com/75/55/S7UUSiJ1_o.png"></a>
+				</div>
+				<p>When you go with these kinds of hosting services, there are also some responsibilities that fall on you. Security is the most crucial. NFSN provides the basic (almost obvious) protections based on their infrastructure. However, it's up to you to ensure your site is secure. In my case, since the blog is built with the most basic technologies and vanilla applications, the attack surface is tiny. Creating a well-configured .htaccess file should do the trick. Also, ensuring there's an active TLS certificate and enabling redirection will pretty much wrap up the security tasks.</p>
+				<p>I make sure that the .htaccess file covers the basic security practices, like minding XSS attacks by setting X-XSS-Protection to "1; mode=block"; preventing clickjacking by always appending X-Frame-Options sameorigin and preventing MIME sniffing by setting X-Content-Type-Options nosniff. Plus, I get to play a little with the URL aesthetics and that's cool.</p>
+				<p>I recognize this is not the biggest operation, but again, being a self-learning tool, its results are more than satisfactory, and overall, this has been a rewarding experience. It's been a blast to do, and eventually, it'll be a happiness machine with countless opportunities to learn and grow. It just takes a bit of hands-on tinkering.</p>
+			</section>
+		</article>
+    </main>
+    <!-- footer -->
+	<footer class="marpad">
+		<p>&copy; 2024 Miguel Bracamontes</p>
+		<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noreferrer"><img src="https://images2.imgbox.com/a5/42/IV9saTzo_o.png"></a>
+	</footer>
+    <!-- scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
